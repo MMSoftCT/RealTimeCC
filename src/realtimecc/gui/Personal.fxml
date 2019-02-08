@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="realtimecc.gui.PersonalController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu text="_Datei">
+            <items>
+              <MenuItem fx:id="miClose" mnemonicParsing="false" text="Beenden" />
+            </items>
+               <accelerator>
+                  <KeyCodeCombination alt="DOWN" code="D" control="UP" meta="UP" shift="UP" shortcut="UP" />
+               </accelerator>
+          </Menu>
+          <Menu text="_Bearbeiten">
+            <items>
+                  <MenuItem fx:id="miAnlegen" mnemonicParsing="true" text="A_nlegen" />
+              <MenuItem fx:id="miChange" mnemonicParsing="true" text="_Bearbeiten" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="miState" mnemonicParsing="true" text="_Statistik" />
+            </items>
+               <accelerator>
+                  <KeyCodeCombination alt="DOWN" code="B" control="UP" meta="UP" shift="UP" shortcut="UP" />
+               </accelerator>
+          </Menu>
+          <Menu text="_Hilfe">
+            <items>
+              <MenuItem fx:id="miAbout" mnemonicParsing="false" text="Über..." />
+            </items>
+               <accelerator>
+                  <KeyCodeCombination alt="DOWN" code="H" control="UP" meta="UP" shift="UP" shortcut="UP" />
+               </accelerator>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ScrollPane layoutY="25.0" prefHeight="375.0" prefWidth="600.0">
+         <content>
+            <TableView fx:id="tblPerson" prefHeight="475.0" prefWidth="585.0">
+              <columns>
+                <TableColumn fx:id="colId" prefWidth="39.0" text="Id" />
+                <TableColumn fx:id="colVorname" prefWidth="120.0" text="Vorname" />
+                  <TableColumn fx:id="colNachname" prefWidth="138.0" text="Nachname" />
+                  <TableColumn fx:id="colPosition" prefWidth="140.0" text="Position" />
+                  <TableColumn fx:id="colStandort" prefWidth="147.0" text="Standort" />
+              </columns>
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                      <MenuItem fx:id="cmAdd" mnemonicParsing="false" text="Anlegen" />
+                        <MenuItem fx:id="cmChange" mnemonicParsing="false" text="Bearbeiten" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="cmStat" mnemonicParsing="false" text="Statistik" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
+            </TableView>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

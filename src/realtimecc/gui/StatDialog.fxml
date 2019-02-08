@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<DialogPane fx:id="dlgPane" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="realtimecc.gui.StatDialogController">
+   <header>
+      <VBox fx:id="vbHead" prefWidth="400.0">
+         <children>
+            <Label fx:id="lblTitle" alignment="CENTER" prefHeight="23.0" prefWidth="405.0" text="Titel">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblName" alignment="CENTER" prefWidth="405.0" text="Name">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <HBox>
+               <children>
+                  <ComboBox fx:id="cbMontYear" prefWidth="150.0" />
+                  <Label fx:id="lblSoll" prefHeight="25.0" prefWidth="100.0" text="Soll Zeit">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="lblIst" prefHeight="25.0" prefWidth="100.0" text="Ist Zeit">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </header>
+   <content>
+      <VBox prefWidth="400.0">
+         <children>
+            <ScrollPane fx:id="spView" prefHeight="200.0" prefWidth="200.0">
+               <content>
+                  <VBox fx:id="vbView" prefHeight="200.0" />
+               </content>
+            </ScrollPane>
+         </children></VBox>
+   </content>
+</DialogPane>

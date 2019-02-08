@@ -1,0 +1,43 @@
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+/build/
+/Dokumentation/Anforderungsanalyse.pdf
+/Dokumentation/Programmbeschreibung.docx
+/Dokumentation/Programmbeschreibung.pdf
+/Dokumentation/Entwicklung RealTimeCC.pdf
+/Dokumentation/Projektplan RealTimeCC.mpp
+/Dokumentation/Anforderungsanalyse.docx
+/Dokumentation/RealTimeCC.vpp
+/Dokumentation/Pflichtenheft.pdf
+/Dokumentation/Anlagen.docx
+/Dokumentation/Projektplan.docx
+/Dokumentation/Projektplan.pdf
+/Dokumentation/Lastenheft.docx
+/Dokumentation/Pflichtenheft.docx
+/Dokumentation/Anlagen.pdf
+/Dokumentation/Lastenheft.pdf
+/Dokumentation/Projektplan RealTimeCC.xlsx
+/Dokumentation/Projektplan RealTimeCC.pdf
+/Dokumentation/Projektübersicht RealTimeCC.pdf
