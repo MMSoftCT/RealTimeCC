@@ -107,7 +107,7 @@ public class RealTimeCC extends Application
             RealTimeCC.worker = wLoader.getController();
 
             load();
-            
+
             // After the app is ready, show the stage
             ready.addListener((ObservableValue<? extends Boolean> ov, Boolean t, Boolean t1) ->
             {
@@ -138,12 +138,6 @@ public class RealTimeCC extends Application
                                     getStage().setTitle("RealTimeCC Mitarbeiterverwaltung");
                                     RealTimeCC.admin.Start();
                                 }
-                            }
-                            else
-                            {
-                                Alert dlg = new Alert(Alert.AlertType.ERROR, "Benutzername oder Passwort ist falsch!", ButtonType.OK);
-                                dlg.showAndWait();
-                                System.exit(0);
                             }
                         }
                     });
@@ -218,6 +212,12 @@ public class RealTimeCC extends Application
         if (result.isPresent())
         {
             ret = getPersonen().getUserPw(result.get().getKey(), result.get().getValue());
+            if (ret == null)
+            {
+                Alert dlg = new Alert(Alert.AlertType.ERROR, "Benutzername oder Passwort ist falsch!", ButtonType.OK);
+                dlg.showAndWait();
+                System.exit(0);
+            }
         };
         return ret;
     }
