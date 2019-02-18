@@ -294,7 +294,7 @@ public class PersonDialogController implements Initializable
 	    {
 		// check email format
 		final Pattern EMAIL_REGEX = Pattern.compile("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?", Pattern.CASE_INSENSITIVE);
-		if (!EMAIL_REGEX.matcher(txtEmail.getText()).matches())
+		if (!txtEmail.getText().isEmpty() && !EMAIL_REGEX.matcher(txtEmail.getText()).matches())
 		{
 		    Message("Das EmailFormat ist nicht gültig !");
 		    txtEmail.requestFocus();
